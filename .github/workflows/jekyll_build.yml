@@ -29,7 +29,7 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           user: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          delete: "true"
-          local_dir: "assets"
+          delete: "false"
+          local_dir: "_site"
           remote_dir: "public_html"
 
