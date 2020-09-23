@@ -72,7 +72,7 @@ jobs:
           user: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           delete: "false"
-          local_dir: "./_site"
+          local_dir: "_site"
           remote_dir: "public_html"
 
       - name: 🚀 deploy
