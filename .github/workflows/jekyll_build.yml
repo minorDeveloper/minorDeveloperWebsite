@@ -18,9 +18,10 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
-    - name: Build
-      uses: minorDeveloper/jekyll-build-action@v1.1
-        
+      # Standard usage
+    - uses:  helaili/jekyll-action@2.0.4
+      env:
+        JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
     
     - name: FTP-Upload
       uses: airvzxf/ftp-deployment-action@v1.0-alpha.1
