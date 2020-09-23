@@ -22,11 +22,14 @@ jobs:
         
     - name: Build
       uses: jerryjvl/jekyll-build-action@v1
-
-    - name: FTP-Deploy-Action
-      uses: SamKirkland/FTP-Deploy-Action@3.1.1
+    
+    - name: FTP-Upload
+      uses: airvzxf/ftp-deployment-action@v1.0-alpha.1
       with:
-        ftp-server: ftp://ftp.minordeveloper.co.uk/public_html/
-        ftp-username: minordev
-        ftp-password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: ./assets/
+          server: ${{ secrets.FTP_SERVER }}
+          user: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          delete: "true"
+          local_dir: "assets"
+          remote_dir: "public_html"
+
