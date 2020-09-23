@@ -17,8 +17,6 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-      with:
-        fetch-depth: 2
         
         # Standard usage
     - uses:  helaili/jekyll-action@2.0.4
