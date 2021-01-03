@@ -63,7 +63,17 @@ jobs:
           # custom_opts: '--drafts --future'
           ### If you need to specify any Jekyll build options, enable the above input
           ### Flags accepted can be found here https://jekyllrb.com/docs/configuration/options/#build-command-options
-            
+      
+      - name: Validate HTML
+        uses: Cyb3r-Jak3/html5validator-action@v0.4.4
+        with:
+          root: _site/
+      
+      - name : Get logfile
+        uses: actions/upload-artifact@v2
+        with:
+          name: log
+          path: log.log
             
       - name: FTP-Upload
         uses: airvzxf/ftp-deployment-action@v1.0-alpha.1
