@@ -29,5 +29,4 @@ end
 gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
 
 # Authentication
-
-gem 'jekyll-auth', :git => 'https://github.com/benbalter/jekyll-auth.git'
+#gem 'jekyll-auth', :git => 'https://github.com/benbalter/jekyll-auth.git'
