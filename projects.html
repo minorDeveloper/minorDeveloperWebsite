@@ -9,7 +9,7 @@ title: Projects
     <li>
         <h2><a href="{{ project.url }}">{{ project.name }}</a></h2>
         <h3>{{ project.position }}</h3>
-        <p>{{ project.content | markdownify }}</p>
+        {{ project.content | markdownify }}
     </li>
     {% endfor %}
 </ul>
