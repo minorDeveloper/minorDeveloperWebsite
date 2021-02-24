@@ -1,5 +1,5 @@
 ---
-short_name: astro
+short_name: Astro
 name: Astrophotography
 ---
 

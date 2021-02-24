@@ -4,3 +4,22 @@ title: Home
 ---
 <h1>Hello</h1>
 <p>This is the front page</p>
+
+<p>These are the latest 3 blogposts</p>
+
+<div class="card-deck">
+    {% for post in site.posts limit:3 %}
+    <div class="card border-dark">
+        <img class="card-img-top d-none d-sm-block"
+             src="{{ site.baseurl }}/assets/images/{{ post.project }}/{% if post.img %}{{ post.img }}{% else %}{{ post.project }}.png{% endif %}"
+             alt="TODO" onerror="this.onerror=null;this.src='{{ site.baseurl }}/assets/images/100px200.svg';">
+        <div class="card-body">
+            <h5 class="card-title"><a href="{{ post.url }}">{{ post.title }}</a></h5>
+            <p class="card-text">{{ post.excerpt }}</p>
+        </div>
+        <div class="card-footer">
+            <small class="text-muted">Uploaded on the {{ post.date | date_to_long_string: "ordinal"}}</small>
+        </div>
+    </div>
+    {% endfor %}
+</div>
