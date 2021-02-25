@@ -1,11 +1,17 @@
 ---
 layout: default
 title: Home
+img: assets\images\index\header.png
 ---
-<h1>Hello</h1>
-<p>This is the front page</p>
 
-<p>These are the latest 3 blogposts</p>
+<div class="jumbotron">
+    <h1 class="display-2">minorDeveloper!</h1>
+    <p class="lead">This is the front page</p>
+    <hr class="my-4">
+    <p>Here I will put a description of stuff</p>
+</div>
+
+<h1 class="display-4 no-box">Recent posts!</h1>
 
 <div class="card-deck">
     {% for post in site.posts limit:3 %}

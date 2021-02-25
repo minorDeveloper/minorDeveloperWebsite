@@ -1,16 +1,25 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="/">minor Developer</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+  <a href="#" class="navbar-brand">minorDeveloper</a>
+  <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
+  <div class="collapse navbar-collapse" id="navbarMenu">
     <ul class="navbar-nav">
-	  {% for item in site.data.navigation %}
-      <li class="nav-item {% if page.url == item.link %} active {% endif %}">
-        <a class="nav-link" href="{{ item.link }}">{{ item.name }}<span class="sr-only">(current)</span></a>
+      {% for item in site.data.navigation %}
+        <li class="nav-item {% if page.url == item.link %} active {% endif %}">
+          <a class="nav-link" href="{{ item.link }}">{{ item.name }}<span class="sr-only">(current)</span></a>
+        </li>
+      {% endfor %}
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <div class="nav-link">
+          <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="darkSwitch">
+            <label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+          </div><script src="{{ site.baseurl }}/assets/js/dark-mode-switch.min.js"></script>
+        </div>
       </li>
-	  {% endfor %}
     </ul>
   </div>
 </nav>
-  

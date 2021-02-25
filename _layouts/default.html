@@ -3,9 +3,12 @@
   {% include head.html %}
   <body>
 	{% include navigation.html %}
+    {% if page.img %}
+      <img src={{ page.img }} class="img-fluid background-img" alt="Gource visualisation of this website's git repository">
+    {% endif %}
     <div class="container">
         {{ content }}
     </div>
-	{% include footer.html %}
+    {% include footer.html %}
   </body>
 </html>
