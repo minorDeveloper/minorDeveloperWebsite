@@ -10,13 +10,15 @@ jobs:
     - name: Check out code
       uses: actions/checkout@v2
 
-    - name: Set up secret file
+    - name: Set up secret files
       env:
-        DEBUG_PASSWORD: ${{ secrets.DEBUG_PASSWORD }}
-        DEBUG_SECRET_KEY: ${{ secrets.DEBUG_SECRET_KEY }}
+        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        FTP_SERVER: ${{ secrets.FTP_SERVER }}
+        FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
       run: |
-        echo $DEBUG_PASSWORD >> secrets.txt
-        echo $DEBUG_SECRET_KEY >> secrets.txt
+        echo $FTP_PASSWORD >> secrets.txt
+        echo $FTP_SERVER >> secrets.txt
+        echo $FTP_USERNAME >> secrets.txt
 
     - name: Run tmate
       uses: mxschmitt/action-tmate@v2
