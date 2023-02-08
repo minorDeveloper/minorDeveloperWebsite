@@ -1,0 +1,20 @@
+name: Build and deploy
+
+on:
+  workflow_dispatch:
+  # This is a manual only workflow
+
+jobs:
+  jekyll:
+    runs-on: ubuntu-latest # can change this to ubuntu-latest if you prefer
+    steps:
+      - name: 📂 setup
+        uses: actions/checkout@v3
+
+      - name: Deploy the site
+        run: |
+          mkdir ~/.ssh
+          echo "${{ secrets.DEPLOY_KEY }}" > ~/.ssh/id_rsa
+          chmod 400 ~/.ssh/id_rsa
+          chmod 0700 ~/.ssh/id_rsa
+          rsync -avz --del -e "ssh -p 88 -i ~/.ssh/id_rsa -vv -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" ${{ github.workspace }}/_site/ ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:public_html/
