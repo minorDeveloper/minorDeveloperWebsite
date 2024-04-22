@@ -19,12 +19,12 @@ timezone: Europe/London
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: minorDeveloper                          # the main title
+title: Sam Lane                          # the main title
 
-tagline: I'm Sam, a Theatre Technician based in London. Here I ramble about various technologies I use to make my life easier.   # it will display as the sub-title
+tagline: Here I ramble about various technologies I use to make my life easier.   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  Sam Lane (minorDeveloper), a theatre technician blogs about programming and electrical engineering.
+  Sam Lane, a theatre technician blogs about programming and electrical engineering.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: 'https://minordeveloper.co.uk'

@@ -1,9 +1,9 @@
 
 
 {
-  "name": "minorDeveloper",
-  "short_name": "minorDeveloper",
-  "description": "Sam Lane (minorDeveloper), a theatre technician blogs about programming and electrical engineering.",
+  "name": "Sam Lane",
+  "short_name": "Sam Lane",
+  "description": "Sam Lane, a theatre technician blogs about programming and electrical engineering.",
   "icons": [
     {
       "src": "/assets/img/favicons/android-chrome-192x192.png",
