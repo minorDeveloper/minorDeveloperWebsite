@@ -9,7 +9,7 @@
 !.stylelintrc.json
 
 # bundler cache
-# _site
+_site
 vendor
 Gemfile.lock
 
@@ -19,5 +19,3 @@ Gemfile.lock
 # npm dependencies
 node_modules
 package-lock.json
-
-_site/
